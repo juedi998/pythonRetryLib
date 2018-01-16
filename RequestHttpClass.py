@@ -1,12 +1,13 @@
 import requests
 class RequestHttp():
     herders = {}
+    proxy = {}
     session = requests.session()
     herders[
         "User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
     session.headers.update(herders)
     def Get(self,url):
-        wdata = self.session.get(url,headers = self.session.headers,verify=False)
+        wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
         if(wdata.status_code != 200):
             Errd = self.ErrorCode(wdata.status_code)
             raise Exception(Errd)
@@ -14,14 +15,14 @@ class RequestHttp():
             wdata.encoding = 'utf8'
             return wdata
     def Post(self,url):
-        wdata = self.session.post(url,headers = self.session.headers,verify=False)
+        wdata = self.session.post(url,headers = self.session.headers,verify=False,proxies = self.proxy)
         if (wdata.status_code != 200):
             Errd = self.ErrorCode(wdata.status_code)
             raise Exception(Errd)
         wdata.encoding = 'utf8'
         return wdata
     def PostForm(self,url,data):
-        wdata = self.session.post(url,data=data,headers = self.session.headers,verify=False)
+        wdata = self.session.post(url,data=data,headers = self.session.headers,verify=False,proxies = self.proxy)
         if (wdata.status_code != 200):
             Errd = self.ErrorCode(wdata.status_code)
             raise Exception(Errd)
