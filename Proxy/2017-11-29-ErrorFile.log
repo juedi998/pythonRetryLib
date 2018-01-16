@@ -1,0 +1,2240 @@
+2017-11-29 21:38:31 Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 9, in Execute
+    return function(url,data)
+TypeError: Get() takes 2 positional arguments but 3 were given
+
+2017-11-29 22:16:15 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x030A31B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='223.15.166.182', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x030A31B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,verify=False,proxies = self.proxy)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='223.15.166.182', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x030A31B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+2017-11-29 22:17:52 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x02FE31B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='191.210.97.143', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x02FE31B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,verify=False,proxies = self.proxy)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='191.210.97.143', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x02FE31B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+2017-11-29 22:18:16 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x02FE37D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='191.210.97.143', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x02FE37D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,verify=False,proxies = self.proxy)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='191.210.97.143', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x02FE37D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:19:26 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x038231B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='182.141.47.142', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x038231B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,verify=False,proxies = self.proxy)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='182.141.47.142', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x038231B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:33:49 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x03B231B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='182.141.47.142', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03B231B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='182.141.47.142', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03B231B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:39:18 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x0331E290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='223.15.161.16', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0331E290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='223.15.161.16', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0331E290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:47:40 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x0394E290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='118.151.209.203', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0394E290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='118.151.209.203', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0394E290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:48:42 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='202.202.90.20', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='202.202.90.20', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 22:48:51 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='202.202.90.20', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='202.202.90.20', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 22:49:38 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 594, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 810, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x03B5B0D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='60.195.17.240', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x03B5B0D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='60.195.17.240', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x03B5B0D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:51:06 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 594, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 810, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 326, in connect
+    ssl_context=context)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\ssl_.py", line 325, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 401, in wrap_socket
+    _context=self, _session=session)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 808, in __init__
+    self.do_handshake()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 1061, in do_handshake
+    self._sslobj.do_handshake()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 683, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:749)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 630, in urlopen
+    raise SSLError(e)
+requests.packages.urllib3.exceptions.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:749)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 512, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:749)
+
+2017-11-29 22:51:20 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 302, in _error_catcher
+    yield
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 384, in read
+    data = self._fp.read(amt)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 449, in read
+    n = self.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 493, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 738, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 436, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 401, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\contextlib.py", line 100, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 320, in _error_catcher
+    raise ProtocolError('Connection broken: %r' % e, e)
+requests.packages.urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 672, in send
+    r.content
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 816, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 741, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+2017-11-29 22:51:36 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 302, in _error_catcher
+    yield
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 384, in read
+    data = self._fp.read(amt)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 449, in read
+    n = self.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 493, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 738, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 436, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 401, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\contextlib.py", line 100, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 320, in _error_catcher
+    raise ProtocolError('Connection broken: %r' % e, e)
+requests.packages.urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 672, in send
+    r.content
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 816, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 741, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+2017-11-29 22:52:00 Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 661, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 661, in <listcomp>
+    history = [resp for resp in gen] if allow_redirects else []
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 137, in resolve_redirects
+    raise TooManyRedirects('Exceeded %s redirects.' % self.max_redirects, response=resp)
+requests.exceptions.TooManyRedirects: Exceeded 30 redirects.
+
+2017-11-29 22:54:02 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 302, in _error_catcher
+    yield
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 384, in read
+    data = self._fp.read(amt)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 449, in read
+    n = self.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 493, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 738, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 436, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 401, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\contextlib.py", line 100, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 320, in _error_catcher
+    raise ProtocolError('Connection broken: %r' % e, e)
+requests.packages.urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 672, in send
+    r.content
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 816, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 741, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+2017-11-29 22:54:07 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 302, in _error_catcher
+    yield
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 384, in read
+    data = self._fp.read(amt)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 449, in read
+    n = self.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 493, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 738, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 436, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 401, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\contextlib.py", line 100, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 320, in _error_catcher
+    raise ProtocolError('Connection broken: %r' % e, e)
+requests.packages.urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 672, in send
+    r.content
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 816, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 741, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+2017-11-29 22:54:59 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 302, in _error_catcher
+    yield
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 384, in read
+    data = self._fp.read(amt)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 449, in read
+    n = self.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 493, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 738, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 436, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 401, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\contextlib.py", line 100, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\response.py", line 320, in _error_catcher
+    raise ProtocolError('Connection broken: %r' % e, e)
+requests.packages.urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 672, in send
+    r.content
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 816, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\models.py", line 741, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)", ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+2017-11-29 22:56:24 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='121.232.147.222', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='121.232.147.222', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 22:56:39 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='121.232.147.222', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='121.232.147.222', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 22:57:08 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='121.232.147.222', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='121.232.147.222', port=9000): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 22:58:05 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x037CB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='177.128.193.201', port=8089): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x037CB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='177.128.193.201', port=8089): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x037CB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:59:04 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='116.214.32.51', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='116.214.32.51', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 22:59:58 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='112.13.93.43', port=8088): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='112.13.93.43', port=8088): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:00:25 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='112.13.93.43', port=8088): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='112.13.93.43', port=8088): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:01:10 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x0392B2B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='103.28.161.68', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0392B2B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='103.28.161.68', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0392B2B0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:02:42 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x03EDB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='116.214.32.51', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03EDB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='116.214.32.51', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03EDB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:03:16 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x0392B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='116.214.32.51', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0392B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='116.214.32.51', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0392B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:04:18 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x040BB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='176.106.46.64', port=8430): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x040BB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='176.106.46.64', port=8430): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x040BB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:05:30 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x03BEB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='60.195.17.240', port=8728): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03BEB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='60.195.17.240', port=8728): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03BEB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:11:01 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x02F5B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='113.68.11.93', port=9999): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x02F5B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='113.68.11.93', port=9999): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x02F5B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:11:50 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 594, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 810, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 326, in connect
+    ssl_context=context)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\ssl_.py", line 325, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 401, in wrap_socket
+    _context=self, _session=session)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 808, in __init__
+    self.do_handshake()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 1061, in do_handshake
+    self._sslobj.do_handshake()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 683, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:749)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 630, in urlopen
+    raise SSLError(e)
+requests.packages.urllib3.exceptions.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:749)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 512, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:749)
+
+2017-11-29 23:15:56 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x0322B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='120.198.224.107', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0322B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='120.198.224.107', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0322B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:17:04 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x03C6B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='117.141.99.38', port=53281): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03C6B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='117.141.99.38', port=53281): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03C6B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:21:02 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x0340B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='83.208.243.158', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0340B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='83.208.243.158', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0340B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:21:42 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='173.68.185.170', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='173.68.185.170', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x031DB2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:24:25 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x03ABE290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='101.68.73.54', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03ABE290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='101.68.73.54', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03ABE290>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+2017-11-29 23:31:42 Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 14, in Get
+    raise Exception(Errd)
+Exception: 请求失败，远端服务器返回了400错误码，请检查您的请求头部。
+
+2017-11-29 23:32:22 Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 13, in Get
+    raise Exception(Errd)
+Exception: 请求失败，远端服务器返回了400错误码，请检查您的请求头部。
+
+2017-11-29 23:32:57 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='123.125.114.144', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='123.125.114.144', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 23:33:05 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='123.125.114.144', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='123.125.114.144', port=80): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 23:35:28 Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 13, in Get
+    raise Exception(Errd)
+Exception: 请求失败，远端服务器返回了404错误码，该页面不存在，请纠正。
+
+2017-11-29 23:35:40 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x038BB2D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='50.93.200.95', port=1080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x038BB2D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='50.93.200.95', port=1080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x038BB2D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+2017-11-29 23:38:19 Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 13, in Get
+    raise Exception(Errd)
+Exception: 请求失败，远端服务器返回了404错误码，该页面不存在，请纠正。
+
+2017-11-29 23:38:33 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='47.52.222.65', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='47.52.222.65', port=3128): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))
+
+2017-11-29 23:46:56 Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 13, in Get
+    raise Exception(Errd)
+Exception: 请求失败，远端服务器返回了404错误码，该页面不存在，请纠正。
+
+2017-11-29 23:51:21 Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 356, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x03F7B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 438, in send
+    timeout=timeout
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='39.104.49.123', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03F7B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python工程\RetryLib\ExceptionClass.py", line 10, in Execute
+    return function(url)
+  File "D:\python工程\RetryLib\RequestHttpClass.py", line 10, in Get
+    wdata = self.session.get(url,headers = self.session.headers,proxies = self.session.proxies,verify=False)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 531, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\juedi\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 500, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPConnectionPool(host='39.104.49.123', port=8080): Max retries exceeded with url: http://2017.ip138.com/ic.asp (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x03F7B2D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。',)))
+
